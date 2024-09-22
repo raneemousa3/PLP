@@ -38,8 +38,8 @@ int main() {
 
 
     std:: string sentence="hello world";
-    std::cout << "size of long " << sizeof(long)<<std :: endl;
-    std::cout << "a + b = " << (a + b) << std::endl;
+    std::cout << "size of long " << sizeof(long)<<std :: endl; //number of bytes long can store
+    std::cout << "a + b = " << (a + b) << std::endl;  
     std::cout << "a + d= " << (a + d) << std::endl;
     std::cout << "d+k= " << (d/k) << std::endl;
     std:: cout << typeid(h).name() << std::endl;
@@ -51,7 +51,7 @@ int main() {
     std::cout << "array= " << arr[4]<< std::endl;
     std::cout << "Value for Key - 2: " << dictionary[2]<< std::endl;
     std::cout << "a/b= " << s<< std::endl;
-     std::cout << "a/b= " << f<< std::endl;
+     std::cout << "l/k= " << f<< std::endl; 
      std:: cout << typeid(f).name() << std::endl;
 
     return 0;
