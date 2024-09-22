@@ -24,6 +24,7 @@ how did you pick the one that you'll be using?I’m using VS code to code in c++
 This week, I will be addressing several key questions about C++.
 
 Primary Data Types
+
 C++ has several primary data types similar to other languages , including:
 
 Integer
@@ -48,6 +49,7 @@ Interesting Facts about C++ Operations
 In C++, you can perform arithmetic operations on various data types:
 
 You can add integers, floats, long integers, and short integers.
+Identifiers are named as followed firstWord , the first word should be in lower case and if there's a second word, it starts in a capital case. NO _ in standard notationo
 When adding floats and doubles, the default type is double unless specified otherwise.
 Similarly, if you combine an integer and a double, the result will also be double by default.
 For decimal numbers, C++ assumes a double type unless otherwise indicated. Using float may be beneficial in terms of memory efficiency when dealing with smaller numbers.
