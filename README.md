@@ -23,7 +23,9 @@ how did you pick the one that you'll be using?I’m using VS code to code in c++
 4. How do you write comments in your language? in python, I used #
 
 
-#PLP2
+PLP2
+
+
 This week, I will be addressing several key questions about C++.
 
 Primary Data Types
