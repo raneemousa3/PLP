@@ -152,6 +152,134 @@ Make sure You take a look at files sp3, 4,5 and 6 and the functions file to gain
 
 
 
+PLP4-
+
+Hello in this PLP, I will be talking about conditional statements;
+
+-In C++, boolean values are represented as:
+
+true: Represents truth (equivalent to 1).
+false: Represents falsehood (equivalent to 0).
+
+Example:
+
+bool isEven = true;
+bool isODD = false;
+
+cout << "Is the number even? " << isEven << endl;  // Outputs: 1
+cout << "Is it odd " << isODD << endl; // Outputs: 0
+
+Conditional statements in C++:
+
+
+1- if Statement:
+
+
+if (condition) {
+    // code if true
+} else {
+    // code if false
+}
+
+2- if- else if -else Statement:
+
+if (condition1) {
+    // code for condition1
+} else if (condition2) {
+    // code for condition2
+} else {
+    // code if all conditions are false
+
+3- ?: statements
+
+example:
+z=1
+y=5
+ int max_value = (z > y) ? z : y;
+  cout << "The max of " << z << " and " << y << " is " << max_value << endl; //max_value=y
+
+in this example (z > y)? returns true or false, if true then the answer is z else its false
+
+
+
+
+Delimiters:
+Delimiting Code Blocks
+C++ uses curly braces {} to define code blocks under conditional statements. This allows you to group multiple statements together.
+
+Short-Circuit Evaluation
+C++ supports short-circuit evaluation with logical operators:
+
+&& (AND): If the first operand is false, the second is not evaluated.
+|| (OR): If the first operand is true, the second is not evaluated.
+Example:
+
+
+
+bool checkFirst() {
+    cout << "Checking first condition." << endl;
+    return false; // returns false
+}
+
+bool checkSecond() {
+    cout << "Checking second " << endl;
+    return true; // returns true
+}
+
+int main() {
+    if (checkFirst() && checkSecond()) {
+        cout << "Both conditions are true." << endl;
+    } else {
+        cout << "At least one condition is false." << endl; // This will execute
+    }
+    return 0;
+    
+Dangling Else Problem
+C++ resolves the "dangling else" problem by always associating the else with the closest preceding if that lacks an else.
+
+
+Example:
+
+int x = 4;
+if (x > 0)
+    if (x > 5)
+        cout << "x is greater than 5." << endl;
+else
+    cout << "x is not greater than 0." << endl; // Associated with the inner if so its going to print "x is not greater than 0."
+
+-To avoid this dangling else problem add curly brackets
+
+if (x > 0) {
+    if (x > 5) 
+    {
+        cout << "x is greater than 5." << endl;
+    }
+            } 
+else {cout << "x is not greater than 0." << endl;}
+
+Switch Statement Behavior
+In C++, a break is optional, but you would want to use one to exit a switch case. Without a break, the program continues executing the following cases (fall-through behavior).
+
+Example:
+
+int x = 2;
+switch (x) {
+    case 1:
+        cout << "One" << endl;
+        break;
+    case 2:
+        cout << "Two" << endl; // This will execute
+        // No break here, so the next case will also execute
+    case 3:
+        cout << "Three" << endl; // This will also execute
+        break;
+    default:
+        cout << "Default" << endl;
+}
+Make sure to look through the conditional statement code and debug it to see whats going on beneath the hood
+
+
+
 
 
 
