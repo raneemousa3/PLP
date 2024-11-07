@@ -98,6 +98,7 @@ Inside Classes: inline functions are defined inside class definitions.
 
 Recursive Functions
 C++ supports recursive functions, allowing a function to call itself. There's no special syntax for this—just the normal function declaration, in the follwing example, it shows how to do factorial
+## Example:
 int factorial(int n) {
     if (n <= 1) return 1; // Base case
     return n * factorial(n - 1); // Recursive call
@@ -161,7 +162,7 @@ Hello in this PLP, I will be talking about conditional statements;
 true: Represents truth (equivalent to 1).
 false: Represents falsehood (equivalent to 0).
 
-Example:
+## Example:
 
 bool isEven = true;
 bool isODD = false;
@@ -192,7 +193,7 @@ if (condition1) {
 
 3- ?: statements
 
-example:
+## Example:
 z=1
 y=5
  int max_value = (z > y) ? z : y;
@@ -212,9 +213,9 @@ C++ supports short-circuit evaluation with logical operators:
 
 && (AND): If the first operand is false, the second is not evaluated.
 || (OR): If the first operand is true, the second is not evaluated.
-Example:
 
 
+## Example:
 
 bool checkFirst() {
     cout << "Checking first condition." << endl;
@@ -238,7 +239,7 @@ Dangling Else Problem
 C++ resolves the "dangling else" problem by always associating the else with the closest preceding if that lacks an else.
 
 
-Example:
+## Example:
 
 int x = 4;
 if (x > 0)
@@ -260,7 +261,7 @@ else {cout << "x is not greater than 0." << endl;}
 Switch Statement Behavior
 In C++, a break is optional, but you would want to use one to exit a switch case. Without a break, the program continues executing the following cases (fall-through behavior).
 
-Example:
+## Example: 
 
 int x = 2;
 switch (x) {
