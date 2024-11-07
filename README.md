@@ -1,6 +1,6 @@
 # C++ PLP
 
-PLP1
+# PLP1
 
 Welcome to My Repository
 In this repository, I will be coding in C++.
@@ -22,7 +22,7 @@ Programming Environment: I’m using Visual Studio Code (VS Code) for C++ develo
 
 Running Programs: In C++, comments are written using //. In Python, comments are made with #.
 
-PLP2
+# PLP2
 
 This Week's Focus: C++ Data Types and Operations
 Primary Data Types
@@ -77,7 +77,7 @@ Lists (arrays) and dictionaries (maps) store only one data type at a time and re
 
 
 
-PLP3-
+# PLP3
 FUNCTIONS 
 In this section, I will be covering Functions in C++, Lets get started:
 
@@ -152,7 +152,7 @@ Make sure You take a look at files sp3, 4,5 and 6 and the functions file to gain
 
 
 
-PLP4-
+# PLP4
 
 Hello in this PLP, I will be talking about conditional statements;
 
