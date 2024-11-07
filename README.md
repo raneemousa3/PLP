@@ -239,7 +239,7 @@ Dangling Else Problem
 C++ resolves the "dangling else" problem by always associating the else with the closest preceding if that lacks an else.
 
 
-## Example:
+### Example:
 
 int x = 4;
 if (x > 0)
