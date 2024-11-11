@@ -288,6 +288,7 @@ Make sure to look through the conditional statement code and debug it to see wha
 A class defines the blueprint for creating objects, including their attributes and behaviors.
 
 ## Example: The Pet Class
+'''
 class Pet {
 protected:
     string Name;
@@ -300,6 +301,7 @@ public:
 
     float getHumanEquAge() const { return HumanEquAge; }
 };
+'''
 
 - Attributes: Name, Age, and HumanEquAge.
 - Constructor: Initializes Name, Age, and HumanEquAge.
@@ -310,16 +312,16 @@ Inheritance allows a class to inherit properties and methods from another class.
 
 Example: The Dog Class
 
-class Dog : public Pet {
+class Dog: public Pet {
 public:
     Dog(string name, int age) : Pet(name, age) {}
-
+    
     void CalculateHumanEquAge() override {
         if (Age == 1) HumanEquAge = 1;
         else if (Age == 2) HumanEquAge = 2;
         else HumanEquAge = 2 + ((Age - 2) * 7);
     }
-};
+
 Inheritance: Dog inherits from Pet and implements CalculateHumanEquAge().
 ### 3. Forcing Implementation with Pure Virtual Functions
 To force a derived class to implement a function, declare the function as pure virtual using = 0.
@@ -339,7 +341,7 @@ public:
     virtual void CalculateHumanEquAge() = 0;  // Pure virtual function
 
     float getHumanEquAge() const { return HumanEquAge; }
-};
+
 Pure Virtual Function: Forces derived classes to implement CalculateHumanEquAge().
 Example: Dog Class Implementation
 cpp
@@ -353,7 +355,7 @@ public:
         else if (Age == 2) HumanEquAge = 2;
         else HumanEquAge = 2 + ((Age - 2) * 7);
     }
-};
+
 #### 4. Putting It All Together
 
 int main() {
