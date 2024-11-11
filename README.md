@@ -288,7 +288,7 @@ Make sure to look through the conditional statement code and debug it to see wha
 A class defines the blueprint for creating objects, including their attributes and behaviors.
 
 ## Example: The Pet Class
-'''
+
 class Pet {
 protected:
     string Name;
@@ -301,7 +301,7 @@ public:
 
     float getHumanEquAge() const { return HumanEquAge; }
 };
-'''
+
 
 - Attributes: Name, Age, and HumanEquAge.
 - Constructor: Initializes Name, Age, and HumanEquAge.
