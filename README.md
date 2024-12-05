@@ -54,24 +54,16 @@ C++ has 48 reserved keywords (e.g., `class`, `const`, `for`, `do`, `short`).
 ## 🔧 PLP3: Functions in C++  
 
 ### ✍️ Syntax for Functions  
+In this section, I will be covering Functions in C++, Lets get started:
+In C++, a function is declared using the following syntax:
+
 ```cpp
 return_type function_name(parameter_type1 param1, parameter_type2 param2) {
     // function body
 }
-'''
+```
 
-# PLP3
-FUNCTIONS 
-In this section, I will be covering Functions in C++, Lets get started:
-
-Function Declaration Syntax
-In C++, a function is declared using the following syntax:
-
-return_type function_name(parameter_type1 parameter_name1, parameter_type2 parameter_name2)
-{
-    // function body
-}
-2.How functions are placed in Code:
+### 2.How functions are placed in Code:
 
 Functions can be defined in various places within a C++ file:
 
@@ -82,10 +74,14 @@ Inside Classes: inline functions are defined inside class definitions.
 Recursive Functions
 C++ supports recursive functions, allowing a function to call itself. There's no special syntax for this—just the normal function declaration, in the follwing example, it shows how to do factorial
 ### Example:
+```cpp
 int factorial(int n) {
     if (n <= 1) return 1; // Base case
     return n * factorial(n - 1); // Recursive call
 }
+```
+
+
 There is one issue here, which is that memory is limited for ints and even long types so the factorial function doesn't work for larger numbers
 
 
@@ -96,12 +92,14 @@ void myFunction(int a, double b, const string c);
 
 -Returning Multiple Values:
 C++ does not support returning multiple values like some languages. However, there are ways to achieve similar functionality:
+```cpp
 
 Using std::pair or a list  You can return a pair or tuple containing multiple values.
 
 std::pair<int, double> myFunction() {
     return std::make_pair(1, 2.5);
 }
+```
 
 
 Pass-by-Reference vs. Pass-by-Value
@@ -119,26 +117,24 @@ Global Scope: Global variables are accessible from any function.
 Lifetime: Local variables are created upon function entry and destroyed upon exit.
 
 
-Side Effects
-Side effects (modifying global state or passing by reference) are possible in C++, for example if you pass a value in an array, you would be able to chnage it as arrays in c++ are passby reference.
+### Side Effects in C++
+Side effects (modifying global state or passing by reference) are possible in C++, for example if you pass a value in an array, you would be able to change it as arrays in c++ are passby reference.
 
-Storage of Local Variable Values:
+**Storage of Local Variable Values:**
 Local variables are typically stored on the stack. If you dynamically allocate memory using new, that memory is on the heap.
 
 
-Other Aspects of Functions
+**Other Aspects of Functions**
 Static vs. Dynamic Scope: C++ uses static scoping, meaning that variable scope is determined at compile time, it could be dynamic by creating virtual functions
 
-Function Overloading: C++ allows multiple functions with the same name but different parameter types or counts.
+**Function Overloading**: C++ allows multiple functions with the same name but different parameter types or counts.
 Inline Functions: Functions can be declared with the inline keyword to suggest to the compiler to expand them inline to reduce function call overhead, this is only possible for simple functions with no returns and no loops.
 
 Make sure You take a look at files sp3, 4,5 and 6 and the functions file to gain a deeper understanding on functions and how they work in c++.
 
 
-
-# PLP4
-
-Hello in this PLP, I will be talking about conditional statements;
+## PLP4
+### I will be talking about conditional statements;
 
 -In C++, boolean values are represented as:
 
@@ -146,18 +142,19 @@ true: Represents truth (equivalent to 1).
 false: Represents falsehood (equivalent to 0).
 
 ### Example:
-
+```cpp
 bool isEven = true;
 bool isODD = false;
-
+```
 cout << "Is the number even? " << isEven << endl;  // Outputs: 1
 cout << "Is it odd " << isODD << endl; // Outputs: 0
 
 Conditional statements in C++:
 
 
-1- if Statement:
+#### 1- if Statement:
 
+```cpp
 
 if (condition) {
     // code if true
@@ -173,21 +170,24 @@ if (condition1) {
     // code for condition2
 } else {
     // code if all conditions are false
+```
 
-3- ?: statements
+#### 3- ?: statements
 
 ### Example:
+```cpp
 z=1
 y=5
  int max_value = (z > y) ? z : y;
   cout << "The max of " << z << " and " << y << " is " << max_value << endl; //max_value=y
+```
 
 in this example (z > y)? returns true or false, if true then the answer is z else its false
 
 
 
 
-Delimiters:
+#### Delimiters:
 Delimiting Code Blocks
 C++ uses curly braces {} to define code blocks under conditional statements. This allows you to group multiple statements together.
 
@@ -199,7 +199,7 @@ C++ supports short-circuit evaluation with logical operators:
 
 
 ### Example:
-
+```cpp
 bool checkFirst() {
     cout << "Checking first condition." << endl;
     return false; // returns false
@@ -217,13 +217,15 @@ int main() {
         cout << "At least one condition is false." << endl; // This will execute
     }
     return 0;
+```
     
-Dangling Else Problem
-C++ resolves the "dangling else" problem by always associating the else with the closest preceding if that lacks an else.
+**Dangling Else Problem**
+###### C++ resolves the "dangling else" problem by always associating the else with the closest preceding if that lacks an else.
 
 
 ### Example:
 
+```cpp
 int x = 4;
 if (x > 0)
     if (x > 5)
@@ -232,7 +234,7 @@ else
     cout << "x is not greater than 0." << endl; // Associated with the inner if so its going to print "x is not greater than 0."
 
 -To avoid this dangling else problem add curly brackets
-
+ 
 if (x > 0) {
     if (x > 5) 
     {
@@ -240,12 +242,14 @@ if (x > 0) {
     }
             } 
 else {cout << "x is not greater than 0." << endl;}
+```
 
-Switch Statement Behavior
+**Switch Statement Behavior**
 In C++, a break is optional, but you would want to use one to exit a switch case. Without a break, the program continues executing the following cases (fall-through behavior).
 
 ### Example: 
 
+```cpp
 int x = 2;
 switch (x) {
     case 1:
@@ -260,7 +264,8 @@ switch (x) {
     default:
         cout << "Default" << endl;
 }
-Make sure to look through the conditional statement code and debug it to see whats going on beneath the hood
+```
+*Make sure to look through the conditional statement code and debug it to see what going on beneath the hood*
 
 
 # plp5: 
@@ -271,6 +276,7 @@ Make sure to look through the conditional statement code and debug it to see wha
 A class defines the blueprint for creating objects, including their attributes and behaviors.
 
 ## Example: The Pet Class
+```cpp
 class Pet {
 protected:
     string Name;
@@ -283,6 +289,7 @@ public:
 
     float getHumanEquAge() const { return HumanEquAge; }
 };
+```
 
 - Attributes: Name, Age, and HumanEquAge.
 - Constructor: Initializes Name, Age, and HumanEquAge.
