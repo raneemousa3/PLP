@@ -315,8 +315,7 @@ Inheritance: Dog inherits from Pet and implements CalculateHumanEquAge().
 To force a derived class to implement a function, declare the function as pure virtual using = 0.
 
 Example: Abstract Pet Class with Pure Virtual Function
-cpp
-Copy code
+```cpp
 class Pet {
 protected:
     string Name;
@@ -330,10 +329,10 @@ public:
 
     float getHumanEquAge() const { return HumanEquAge; }
 };
+```
 Pure Virtual Function: Forces derived classes to implement CalculateHumanEquAge().
 Example: Dog Class Implementation
-cpp
-Copy code
+```cpp
 class Dog : public Pet {
 public:
     Dog(string name, int age) : Pet(name, age) {}
@@ -344,14 +343,16 @@ public:
         else HumanEquAge = 2 + ((Age - 2) * 7);
     }
 };
+```
 #### 4. Putting It All Together
-
+```cpp
 int main() {
     Dog d1("Harry", 12);
     d1.CalculateHumanEquAge();
     cout << "Human Equivalent Age of Dog: " << d1.getHumanEquAge() << endl;
     return 0;
 }
+```
 #### Summary
 - Classes define objects with attributes and methods.
 - Inheritance allows derived classes to inherit and override methods.
